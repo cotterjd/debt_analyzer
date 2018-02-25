@@ -1,0 +1,21 @@
+<template>
+	<h1>${heading}</h1>
+
+	<form submit.trigger="addLoan()">
+		<label>Principle</label>
+		<input type="text" value.bind="principle">
+		<label>Rate</label>
+		<input type="text" value.bind="rate">
+		<label>Minimum Payment</label>
+		<input type="text" value.bind="minPayment">
+		<button type="submit">Add Loan</button>
+	</form>
+
+	<ul>
+		<li repeat.for="loan of loans">
+			<span css="">
+				${loan.principle}
+			</span>
+		</li>
+	</ul>
+</template>
